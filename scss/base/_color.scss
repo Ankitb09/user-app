@@ -1,0 +1,17 @@
+/// <reference path = "../abstracts/__abstracts.scss">
+
+/*==Color Pallet css==*/
+
+/*Background color*/
+.no-bg{background:transparent}
+.primary-bg{background:$primary-bg}
+.footer-bg{background:$footer-bg}
+.bg-variation-1{background:$color-bg1}
+.bg-variation-2{background:$color-bg2}
+.bg-variation-3{background:$color-bg3}
+.bg-variation-4{background:$color-bg4}
+
+
+/*Button color*/
+.btn-primary-colr{background:$btn-primary-color}
+.btn-sec-colr{background:$btn-secondary-color}

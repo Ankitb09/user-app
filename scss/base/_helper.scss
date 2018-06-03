@@ -1,0 +1,88 @@
+/// <reference path = "../abstracts/__abstracts.scss">
+/*************************************Helper/Utility Classes : Starts*****************************************/
+/******helper margin classes : starts******/
+
+/*Font style*/
+.font-normal{font-style:normal}
+.font-italic{font-style:italic}
+
+/*Text align*/
+.text-center{text-align:center}
+.text-left{text-align:left}
+.text-right{text-align:right}
+
+/*Text case*/
+.text-uppercase{text-transform:uppercase}
+.text-lowercase{text-transform:lowercase}
+
+/*Text decoration*/
+.text-underline{text-decoration:underline}
+.text-noline{text-decoration:none}
+
+/*Position*/
+.pos-relative{position:relative}
+.pos-absolute{position:absolute}
+.pos-static{position:static}
+
+/*Display style*/
+.d-inline{display:inline}
+.d-inline-block{display:inline-block}
+.d-block{display:block}
+.d-table{display: table}
+.d-table-cell{display: table-cell}
+.d-none{display: none}
+
+
+.w100{width: 100%}
+
+/*Inline List*/
+.list-inline{
+   li {
+      display:inline-block;  
+    }    
+}
+
+
+
+/*Margin css*/
+
+/*Margin top css*/
+ @each $space in $margin-top-list{
+    .mt-#{$space} {
+      margin-top: #{$space}px;
+     }
+ }
+
+/*Margin bottom css*/
+ @each $space in $margin-bottom-list{
+    .mb-#{$space} {
+      margin-bottom: #{$space}px;
+     }
+ }
+
+@each $space in $margin-right-list{
+    .mr-#{$space} {
+      margin-right: #{$space}px;
+     }
+ }
+
+/*padding css*/
+@each $space in $padding-top-list{
+    .pt-#{$space} {
+      padding-top: #{$space}px;
+     }
+ }
+
+@each $space in $padding-bottom-list{
+    .pb-#{$space} {
+      padding-bottom: #{$space}px;
+     }
+ }
+
+@each $space in $padding-right-list{
+    .pr-#{$space} {
+      padding-right: #{$space}px;
+     }
+ }
+
+ .btn-block{width: 100%;}

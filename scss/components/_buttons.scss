@@ -1,0 +1,105 @@
+/// <reference path = "../abstracts/__abstracts.scss">
+/*******Button CSS : Starts*********/
+
+//
+// Buttons
+// --------------------------------------------------
+// Base styles
+// --------------------------------------------------
+.btn {
+    @include button-size( $font-size: $btn-font-size-base, $font-weight: $btn-font-weight, $padding:$btn-padding-base, $btn-min-width:$btn-width-base);
+    font-family: $btn-font-family;
+    text-transform: uppercase;
+    border-radius: 3px;
+    &:disabled,
+    &.disabled {
+        background: $btn-disable-bg;
+        cursor: default;
+        color: $grey10;
+        pointer-events: none;
+        opacity: 0.4;
+        border-color: $btn-border;
+    }
+    &:hover {
+        box-shadow: none
+    }
+    &:active:focus,
+    &.active:focus,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+        box-shadow: none
+    }
+}
+
+// Button Themes
+// --------------------------------------------------
+.btn-primary {
+    @include button-variant( $color: $btn-primary-color, $background: $btn-primary-bg, $background-hover: $btn-primary-bg-hover, $background-active: $btn-primary-bg-active, $border:$btn-primary-border, $border-hover-color:$btn-primary-border, $border-active-color:$btn-primary-border);
+}
+
+.btn-secondary {
+    @include button-variant( $color: $btn-secondary-color, $background: $btn-secondary-bg, $background-hover: $btn-secondary-bg-hover, $background-active: $btn-secondary-bg-active, $border:$btn-secondary-border, $border-hover-color:$btn-secondary-border, $border-active-color:$btn-secondary-border);
+}
+
+.btn-tertiary {
+    @include button-variant( $color: $btn-tertiary-color, $background: $btn-tertiary-bg, $background-hover: $btn-tertiary-bg-hover, $background-active: $btn-tertiary-bg-active, $border:$btn-tertiary-border, $border-hover-color:$btn-tertiary-border, $border-active-color:$btn-tertiary-border);
+}
+
+.btn-tertiary-alt {
+    @include button-variant( $color: $btn-alt-color, $background:$btn-alt-bg, $background-hover: $btn-alt-bg-hover, $background-active: $btn-alt-bg-active, $border:$btn-alt-border, $border-hover-color:$btn-alt-border, $border-active-color:$btn-alt-border);
+}
+
+.btn-tabs {
+    .btn:not(:last-child) {
+        margin-right: 5px
+    }
+    .btn.active.focus,
+    .btn.active:focus,
+    .btn.focus,
+    .btn:active.focus,
+    .btn:active:focus,
+    .btn:focus {
+        outline: none
+    }
+    .btn:active,
+    .btn.active {
+        border-color: $link-color;
+        box-shadow: none;
+        background: none;
+    }
+}
+
+// Button Sizes
+// --------------------------------------------------
+.btn-lg {
+    @include button-size( $font-size: $btn-font-size-lg, $font-weight: $btn-font-weight-lg, $padding:$btn-padding-lg, $btn-min-width:$btn-width-lg);
+}
+
+.btn-sm {
+    @include button-size($font-size: $btn-font-size-xs, $font-weight: $btn-font-weight-xs, $padding:$btn-padding-xs, $btn-min-width:$btn-width-xs);
+}
+
+
+.tab-content{padding:20px}
+.tab-links {
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid #ececec;
+    li {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        border-bottom: 2px solid transparent;
+        &.active {
+            border-bottom-color: #45A94D;
+        }
+        a {
+            color: #4AB352;
+            padding: 8px 0;
+            display: block;
+            text-decoration: none
+        }
+    }
+}

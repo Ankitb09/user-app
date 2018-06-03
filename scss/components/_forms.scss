@@ -1,0 +1,23 @@
+/// <reference path = "../abstracts/__abstracts.scss">
+.form-container {
+    box-shadow: 5px 5px 7px 0px rgba(0, 0, 0, 0.1);
+    background: #fff
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-control {
+    width: 100%;
+    border-radius: 3px;
+}
+
+//// floating labels
+.label-float {
+    position: relative;
+    label {
+        position: absolute;
+    }
+    .form-control:focus+label {font-size: 10px}
+}

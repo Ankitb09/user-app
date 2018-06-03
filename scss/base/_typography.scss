@@ -1,0 +1,39 @@
+/// <reference path = "../abstracts/__abstracts.scss">
+
+/*==Typography css==*/
+
+// Placeholder for default style
+%default-style{
+    color:$text-default-color;font-size:$font-size-default;font-family:$font-family-default; 
+}
+
+
+/*Heading css*/
+.font-primary{font-family:$font-family-primary}
+.font-default{font-family:$font-family-default}
+
+
+h1,.h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6{font-family: $heading-font-family; color:$text-default-color;font-weight:$font-weight-normal;line-height:$line-height-base;margin-top: 10px;margin-bottom:10px}
+h1,.h1{font-size:$font-size-h1}
+h2,.h2{font-size:$font-size-h2}
+h3,.h3{font-size:$font-size-h3}
+h4,.h4{font-size:$font-size-h4}
+h5,.h5{font-size:$font-size-h5}
+
+/*Font weight css*/
+.font-bold{font-weight:$font-weight-bold}
+.font-semibold{font-weight:$font-weight-semi-bold}
+.font-medium{font-weight:$font-weight-medium}
+.font-regular{font-weight:$font-weight-normal}
+.font-light{font-weight:$font-weight-light}	
+
+/*Paragraph styles css*/
+.text-lg{font-size:$font-size-lg}
+.text-md{font-size:$font-size-md}
+.text-sm{font-size:$font-size-sm}
+.text-xs{font-size:$font-size-xs}
+
+/**** Validation Text******/
+.error-text{color: $color-error}
+.success-text{color: $color-success}
+
