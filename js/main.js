@@ -5,15 +5,39 @@
 // execute functions here
 window.onload = setUp;
 
-$('.tab-links a').click(function(){
-    var elem = $(this).attr('href');
-    $('.tab-links li').removeClass('active')
-    $(this).parent().addClass('active');
-    $('.tab-content').hide();
-    $(elem).show();
+$('.tab-links a').click(function () {
+    tabbing($(this))
 })
 
 // function defination goes here
-function setUp(){
-    console.log();
+function setUp() {
+    // tabbing for signin/register
+    tabbing($('.tab-links li.active a'))
+
+
+    // floating label inputs
+    $('.label-float input').on('blur', function () {
+        labelFloat($(this))
+    });
+}
+
+
+// tab function
+function tabbing(ele) {
+    var clickedElem = ele.attr('href');
+    $('.tab-links li').removeClass('active')
+    ele.parent().addClass('active');
+    $('.tab-content').hide();
+    $(clickedElem).show();
+}
+
+// floating label
+function labelFloat(elemArr) {
+    elemArr.each(function (i, elem) {
+        if ($(this).val() !== '') {
+            $(this).addClass("filled");
+        } else {
+            $(this).removeClass("filled");
+        }
+    })
 }

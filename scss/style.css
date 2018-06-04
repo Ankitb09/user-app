@@ -312,7 +312,7 @@ img {
   max-width: 100%; }
 
 /*==Typography css==*/
-body {
+body, .form-control {
   color: #494E4F;
   font-size: 14px;
   font-family: "Open Sans", Arial, sans-serif; }
@@ -591,15 +591,38 @@ h5, .h5 {
   margin-bottom: 10px; }
 
 .form-control {
+  height: 46px;
+  border-radius: 3px;
+  border: 1px solid #DDD;
+  background: #fff;
   width: 100%;
-  border-radius: 3px; }
+  box-shadow: none; }
+  .form-control:focus {
+    border-color: #3591CF;
+    outline: 0 none;
+    box-shadow: none; }
+    .form-control:focus label {
+      color: #3591CF; }
+
+input.form-control {
+  padding: 6px 30px 6px 12px; }
 
 .label-float {
   position: relative; }
   .label-float label {
-    position: absolute; }
-  .label-float .form-control:focus + label {
-    font-size: 10px; }
+    position: absolute;
+    color: #919191;
+    top: 14px;
+    left: 13px;
+    transition: all .15s ease;
+    cursor: text; }
+  .label-float input {
+    padding-top: 13px;
+    transition: all .15s ease; }
+  .label-float input:focus ~ label,
+  .label-float .filled ~ label {
+    font-size: 11px;
+    top: 1px; }
 
 /*******Button CSS : Starts*********/
 .btn {
