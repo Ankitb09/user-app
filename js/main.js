@@ -24,7 +24,7 @@ function setUp() {
 
 // tab function
 function tabbing(ele) {
-    var clickedElem = ele.attr('href');
+    var clickedElem = ele.attr('data-href');
     $('.tab-links li').removeClass('active')
     ele.parent().addClass('active');
     $('.tab-content').hide();

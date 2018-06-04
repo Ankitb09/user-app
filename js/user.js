@@ -6,19 +6,13 @@ $(document).ready(function () {
 
     $('#js-form-signin').submit(function (e) {
 
-
         $('#js-form-signin .error-text').hide(); // hiding error message on submit
-
         var userName = $('#userName').val();
         var userPass = $('#password').val();
-
-        var userCredentials = JSON.parse(localStorage.getItem('user'));
-        if (userCredentials.name != userName) {
-            $('#userName').after('<span class="error-text">Please check user name</span>');
-            return false;
-        }
-        if (userCredentials.pass != userPass) {
-            $('#password').after('<span class="error-text">Please check your password</span>');
+        var userCredentials = getStorage('user'); // get item from local storage
+        
+        if (userCredentials.name !== userName || userCredentials.password !== userPass) {
+            $(this).find('button[type="submit"]').before('<span class="error-text text-center">Please check user name or Password</span>');
             return false;
         }
     })
@@ -32,12 +26,31 @@ $(document).ready(function () {
             email: newUserEmail,
             pass: newUserPass
         }
-        if (window.localStorage) {
-            localStorage.setItem('user', JSON.stringify(newuser))
-        }
-        else {
-            console.error('Your Browser Doesn\'t Support local Storage')
-        }
-        e.preventDefault();
+        setStorage('user',newuser);
+
+        window.location = '/profile.html'
     })
 })
+
+
+// function declarations
+
+// getting data from localstorage
+function getStorage(item){
+    return JSON.parse(localStorage.getItem(item));
+}
+
+// setting data to localstorage
+function setStorage(item,data){
+    if (window.localStorage) {
+        localStorage.setItem(item, JSON.stringify(data))
+    }
+    else {
+        console.error('Your Browser Doesn\'t Support local Storage')
+    }
+}
+
+function createCookie(){
+    var d = new Data();
+    
+}
