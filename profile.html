@@ -7,9 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Montserrat:300,400,600,700" rel="stylesheet" />
     <link rel="stylesheet" href="scss/style.css" />
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/user.js"></script>
+    <script src="js/table.js"></script>
     <title>User Profile</title>
 
 </head>
@@ -17,13 +19,29 @@
 <body>
     <header class="header">
         <div class="container">
-            <!--<img src="images/servicenow-header-logo.svg" class="brand-logo" />-->
-            <a href="#">Login</a>
-            <a href="#">Login</a>
+            <!-- <img src="images/servicenow-header-logo.svg" class="brand-logo" /> -->
+            <a href="#" class="fl-right btn-logout">
+                <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
         </div>
     </header>
     <div class="container">
-        <h3>Welcome</h3>
+        <div class="unAuth-message">
+            <a href="/index.html">Please Signin to Access your profile</a>
+        </div>
+        <div>
+            <ul id="product-table" class="table-grid table-content">
+                <li class="table-head">
+                    <span class="table-col">#</span>
+                    <span class="table-col">Name</span>
+                    <span class="table-col">Product Code</span>
+                    <span class="table-col">Size</span>
+                    <span class="table-col">Price</span>
+                    <span class="table-col">Color</span>
+                    <span class="table-col">Available</span>
+                    <span class="table-col"></span>
+                </li>
+            </ul>
+        </div>
     </div>
     <script src="js/main.js"></script>
 </body>

@@ -1,0 +1,22 @@
+/// <reference path = "../abstracts/__abstracts.scss">
+.user-profile {
+    background: #fff;
+}
+
+.user-details {
+    padding: 10px;
+}
+
+.user-name {
+    font-weight: 600;
+    text-align: center;
+    a {
+        text-decoration: none;
+    }
+}
+.user-sale-details{
+    padding: 10px 20%;
+    li{}
+    strong{width: 50%}
+    span{}
+}

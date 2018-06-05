@@ -1,0 +1,12 @@
+/// <reference path = "../abstracts/__abstracts.scss">
+
+.unAuthUser{
+    .logout {display: none}
+    .user-profile{display: none}
+    .unAuth-message{display: block}
+}
+
+.authUser{
+    .form-container{display: none}
+    .unAuth-message{display: none}
+}

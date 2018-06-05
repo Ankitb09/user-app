@@ -445,8 +445,8 @@ h5, .h5 {
 .d-none {
   display: none; }
 
-.w100 {
-  width: 100%; }
+.fl-right {
+  float: right; }
 
 /*Inline List*/
 .list-inline li {
@@ -793,11 +793,66 @@ input.form-control {
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.3);
   padding: 20px 0; }
 
-.main-content-section {
-  padding: 100px 0 0 15%; }
-
-/*******************************************Common Components : Ends *******************************************/
 .brand-logo {
   width: 100px; }
+
+.main-content-section {
+  padding: 55px 0 0 15%; }
+
+.unAuthUser .logout {
+  display: none; }
+.unAuthUser .user-profile {
+  display: none; }
+.unAuthUser .unAuth-message {
+  display: block; }
+
+.authUser .form-container {
+  display: none; }
+.authUser .unAuth-message {
+  display: none; }
+
+.user-profile {
+  background: #fff; }
+
+.user-details {
+  padding: 10px; }
+
+.user-name {
+  font-weight: 600;
+  text-align: center; }
+  .user-name a {
+    text-decoration: none; }
+
+.user-sale-details {
+  padding: 10px 20%; }
+  .user-sale-details strong {
+    width: 50%; }
+
+.table-grid {
+  display: table;
+  border-spacing: 0 12px;
+  width: 100%; }
+  .table-grid li {
+    display: table-row; }
+  .table-grid .table-col {
+    display: table-cell;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD; }
+    .table-grid .table-col:first-child {
+      border-left: 1px solid #DDD; }
+    .table-grid .table-col:last-child {
+      border-right: 1px solid #DDD; }
+  .table-grid .product-color i {
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    margin-right: 3px; }
+  .table-grid .table-head {
+    font-weight: 600; }
+
+/*******************************************Common Components : Ends *******************************************/
 
 /*# sourceMappingURL=style.css.map */
