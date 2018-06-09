@@ -19,7 +19,7 @@
 <body>
     <header class="header">
         <div class="container">
-            <!-- <img src="images/servicenow-header-logo.svg" class="brand-logo" /> -->
+            <img src="images/servicenow-header-logo.svg" class="brand-logo" />
             <a href="#" class="fl-right btn-logout">
                 <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
         </div>
@@ -28,17 +28,27 @@
         <div class="unAuth-message">
             <a href="/index.html">Please Signin to Access your profile</a>
         </div>
-        <div>
+
+        <div class="table-container">
+            <h3>Product List</h3>
             <ul id="product-table" class="table-grid table-content">
                 <li class="table-head">
-                    <span class="table-col">#</span>
-                    <span class="table-col">Name</span>
-                    <span class="table-col">Product Code</span>
-                    <span class="table-col">Size</span>
-                    <span class="table-col">Price</span>
-                    <span class="table-col">Color</span>
-                    <span class="table-col">Available</span>
-                    <span class="table-col"></span>
+                    <div>
+                        <span class="table-col" data-column="1">#</span>
+                        <span class="table-col" data-column="2">Name</span>
+                        <span class="table-col" data-column="3">Product Code </span>
+                        <span class="table-col" data-column="4">Size </span>
+                        <span class="table-col" data-column="5">Price </span>
+                        <span class="table-col" data-column="6">Color </span>
+                        <span class="table-col" data-column="7">Available </span>
+                        <span class="table-col" data-column="8">#</span>
+                    </div>
+                </li>
+                <li class="table-body">
+                    <!-- Data will be appended by table.js using db.json -->
+                </li>
+                <li>
+                    <a href="javascript:void(0)">Add New Product</a>
                 </li>
             </ul>
         </div>

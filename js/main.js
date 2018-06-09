@@ -9,7 +9,7 @@ $('.tab-links a').click(function () {
     tabbing($(this))
 })
 
-// function defination goes here
+//=========== function defination goes here ==============
 function setUp() {
     // tabbing for signin/register
     tabbing($('.tab-links li.active a'))

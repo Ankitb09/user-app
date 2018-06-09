@@ -799,7 +799,12 @@ input.form-control {
 .main-content-section {
   padding: 55px 0 0 15%; }
 
-.unAuthUser .logout {
+.data-container {
+  background: #fff;
+  padding: 20px;
+  margin: 10px 0; }
+
+.unAuthUser .btn-logout {
   display: none; }
 .unAuthUser .user-profile {
   display: none; }
@@ -828,16 +833,34 @@ input.form-control {
   .user-sale-details strong {
     width: 50%; }
 
+.table-container {
+  position: relative;
+  margin: 40px 0 0;
+  background: #FAFAFA; }
+
 .table-grid {
-  display: table;
-  border-spacing: 0 12px;
+  border-spacing: 0 6px;
   width: 100%; }
-  .table-grid li {
-    display: table-row; }
+  .table-grid .table-body {
+    width: 100%;
+    max-height: 215px;
+    overflow-y: auto; }
+  .table-grid li > div {
+    overflow: hidden;
+    display: table;
+    width: 100%; }
+    .table-grid li > div:hover .table-col {
+      background: #f1f1f1; }
+  .table-grid .table-head {
+    font-weight: 600; }
+    .table-grid .table-head .table-col {
+      background: #f1f1f1; }
   .table-grid .table-col {
     display: table-cell;
     padding: 10px;
+    min-width: 100px;
     margin-bottom: 10px;
+    text-align: center;
     border-top: 1px solid #DDD;
     border-bottom: 1px solid #DDD; }
     .table-grid .table-col:first-child {
@@ -850,8 +873,6 @@ input.form-control {
     height: 12px;
     display: inline-block;
     margin-right: 3px; }
-  .table-grid .table-head {
-    font-weight: 600; }
 
 /*******************************************Common Components : Ends *******************************************/
 

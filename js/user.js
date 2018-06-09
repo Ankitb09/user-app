@@ -33,7 +33,7 @@ var formActions = {
         var userCredentials = utilities.getStorage('user'); // get item from local storage
 
         if (userCredentials.name !== userName || userCredentials.password !== userPass) {
-            thisElem.find('button[type="submit"]').before('<span class="error-text text-center">Please check user name or Password</span>');
+            thisElem.find('button[type="submit"]').before('<span class="error-text text-center">Please check your user name or Password</span>');
             return false;
         }
         return true;
