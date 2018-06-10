@@ -34,8 +34,6 @@ $(document).ready(function () {
 
 
 
-
-
 // Function declarations
 
 function getData() {
@@ -69,7 +67,7 @@ function structreCreation(data) {
             }).join('')}
             </span>
             <span class="table-col" data-column="7">${curr.productCount} items</span>
-            <span class="table-col js-remove-row" data-column="8">&#10008;</span>
+            <span class="table-col js-remove-row" data-column="8" title="delete row">&#10008;</span>
        </div>`;
         $('#product-table .table-body').append(tableRowNode)
     })

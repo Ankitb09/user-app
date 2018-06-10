@@ -10,6 +10,8 @@
     @include button-size( $font-size: $btn-font-size-base, $font-weight: $btn-font-weight, $padding:$btn-padding-base, $btn-min-width:$btn-width-base);
     font-family: $btn-font-family;
     text-transform: uppercase;
+    display: inline-block;
+    text-decoration: none;
     border-radius: 3px;
     &:disabled,
     &.disabled {
@@ -21,7 +23,8 @@
         border-color: $btn-border;
     }
     &:hover {
-        box-shadow: none
+        box-shadow: none;
+        text-decoration: none
     }
     &:active:focus,
     &.active:focus,
@@ -43,34 +46,6 @@
     @include button-variant( $color: $btn-secondary-color, $background: $btn-secondary-bg, $background-hover: $btn-secondary-bg-hover, $background-active: $btn-secondary-bg-active, $border:$btn-secondary-border, $border-hover-color:$btn-secondary-border, $border-active-color:$btn-secondary-border);
 }
 
-.btn-tertiary {
-    @include button-variant( $color: $btn-tertiary-color, $background: $btn-tertiary-bg, $background-hover: $btn-tertiary-bg-hover, $background-active: $btn-tertiary-bg-active, $border:$btn-tertiary-border, $border-hover-color:$btn-tertiary-border, $border-active-color:$btn-tertiary-border);
-}
-
-.btn-tertiary-alt {
-    @include button-variant( $color: $btn-alt-color, $background:$btn-alt-bg, $background-hover: $btn-alt-bg-hover, $background-active: $btn-alt-bg-active, $border:$btn-alt-border, $border-hover-color:$btn-alt-border, $border-active-color:$btn-alt-border);
-}
-
-.btn-tabs {
-    .btn:not(:last-child) {
-        margin-right: 5px
-    }
-    .btn.active.focus,
-    .btn.active:focus,
-    .btn.focus,
-    .btn:active.focus,
-    .btn:active:focus,
-    .btn:focus {
-        outline: none
-    }
-    .btn:active,
-    .btn.active {
-        border-color: $link-color;
-        box-shadow: none;
-        background: none;
-    }
-}
-
 // Button Sizes
 // --------------------------------------------------
 .btn-lg {
@@ -81,8 +56,10 @@
     @include button-size($font-size: $btn-font-size-xs, $font-weight: $btn-font-weight-xs, $padding:$btn-padding-xs, $btn-min-width:$btn-width-xs);
 }
 
+.tab-content {
+    padding: 20px
+}
 
-.tab-content{padding:20px}
 .tab-links {
     display: table;
     width: 100%;

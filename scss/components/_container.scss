@@ -1,13 +1,61 @@
 /// <reference path = "../abstracts/__abstracts.scss">
-
-.brand-logo{width: 100px;}
-
-.main-content-section {
-    padding: 55px 0 0 15%;
+.brand-logo {
+    width: 100px;
 }
 
-.data-container{
+.form-container,
+.user-profile,
+.box-container {
+    box-shadow: 5px 5px 7px 0px rgba(0, 0, 0, 0.1);
+    background: #fff
+}
+
+.main-content-section {
+    padding: 40px 0 0 15%;
+}
+
+.box-features-outer {
+    margin-top: 20px;
+    padding: 0 20px
+}
+
+.box-features {
+    display: inline-block;
+    margin-right: 6%;
+    padding: 15px;
+    &:last-child {
+        margin-right: 0
+    }
+    .fa {
+        float: left;
+        font-size: 48px;
+    }
+    .feature-details {
+        padding: 0 0 0 85px
+    }
+    span {
+        font-family: $font-family-primary;
+        font-size: 20px
+    }
+    small {
+        display: block
+    }
+}
+
+.data-container {
     background: #fff;
-    padding:20px;
+    padding: 20px;
     margin: 10px 0;
+}
+
+.list-features {
+    li {
+        margin: 6px 0
+    }
+    .fa-bullseye {
+        font-size: 20px;
+        color: $green06;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
 }

@@ -1,19 +1,16 @@
 .table-container {
     position: relative;
     margin: 40px 0 0;
-    background: $primary-bg;
-    
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid $border-color-secondary;
 }
 
 .table-grid {
+    cursor: default;
     border-spacing: 0 6px;
     width: 100%;
-    
-    .table-body {
-        width: 100%;
-        max-height: 215px;
-        overflow-y: auto;
-    }
     li>div {
         overflow: hidden;
         display: table;
@@ -24,9 +21,17 @@
     }
     .table-head {
         font-weight: 600;
-        .table-col{
+        .table-col {
             background: #f1f1f1
         }
+    }
+    .table-body {
+        width: 100%;
+        max-height: 215px;
+        overflow-y: auto;
+    }
+    .table-footer {
+        padding:20px 0 0;
     }
     .table-col {
         display: table-cell;
@@ -43,7 +48,6 @@
             border-right: 1px solid $border-color-secondary;
         }
     }
-    
     .product-color i {
         border-radius: 50%;
         width: 12px;
@@ -51,4 +55,9 @@
         display: inline-block;
         margin-right: 3px;
     }
+}
+
+.resizing{cursor: ew-resize}
+.js-remove-row {
+    cursor: pointer;
 }

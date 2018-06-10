@@ -12,14 +12,14 @@
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/user.js"></script>
     <script src="js/table.js"></script>
-    <title>User Profile</title>
+    <title>User Dashboard</title>
 
 </head>
 
 <body>
     <header class="header">
         <div class="container">
-            <img src="images/servicenow-header-logo.svg" class="brand-logo" />
+            <a href="/index.html"><img src="images/servicenow-header-logo.svg" class="brand-logo" /></a>
             <a href="#" class="fl-right btn-logout">
                 <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
         </div>
@@ -28,7 +28,36 @@
         <div class="unAuth-message">
             <a href="/index.html">Please Signin to Access your profile</a>
         </div>
-
+        <div class="clearfix box-features-outer">
+            <div class="box-container col-2 box-features">
+                <i class="ic-money fa fa-money fl" aria-hidden="true"></i>
+                <div class="feature-details">
+                    <span>$20,000</span>
+                    <small>Total Earnings</small>
+                </div>
+            </div>
+            <div class="box-container col-2 box-features">
+                <i class="fa fa-cart-plus ic-products" aria-hidden="true"></i>
+                <div class="feature-details">
+                    <span>1000</span>
+                    <small>Total Items</small>
+                </div>
+            </div>
+            <div class="box-container col-2 box-features">
+                <i class="fa fa-users ic-users" aria-hidden="true"></i>
+                <div class="feature-details">
+                    <span>700</span>
+                    <small>Total Clients</small>
+                </div>
+            </div>
+            <div class="box-container col-2 box-features">
+                <i class="fa fa-heart ic-followers" aria-hidden="true"></i>
+                <div class="feature-details">
+                    <span>300</span>
+                    <small>Followers</small>
+                </div>
+            </div>
+        </div>
         <div class="table-container">
             <h3>Product List</h3>
             <ul id="product-table" class="table-grid table-content">
@@ -47,8 +76,8 @@
                 <li class="table-body">
                     <!-- Data will be appended by table.js using db.json -->
                 </li>
-                <li>
-                    <a href="javascript:void(0)">Add New Product</a>
+                <li class="table-footer">
+                    <a href="javascript:void(0)" class="btn btn-secondary">Add New Product</a>
                 </li>
             </ul>
         </div>

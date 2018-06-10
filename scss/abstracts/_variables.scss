@@ -24,7 +24,7 @@ $blue05             :           #1F5B83;
 $blue06             :           #2380BE;
 $blue07             :           #EEF9FF;
 $blue08             :           #3591CF;
-$blue09             :           #EDF8FF;
+$blue09             :           #20C0F1;
 
 $yellow01           :           #FFA60A;
 $yellow02           :           #F7971D;
@@ -129,28 +129,11 @@ $btn-primary-border:             $transparent;
 
 //Buttons secondary variable
 $btn-secondary-color:              $white;
-$btn-secondary-bg:                 $blue08;
+$btn-secondary-bg:                 $blue09;
 $btn-secondary-bg-hover:           $blue06;
 $btn-secondary-bg-active:          $blue05;
 $btn-secondary-border:             $transparent;
 
-//Buttons tertiary variable
-$btn-tertiary-color:              $grey09;
-$btn-tertiary-bg:                 $white;
-$btn-tertiary-bg-hover:           $grey01;
-$btn-tertiary-bg-active:          $blue03;
-$btn-tertiary-border:             $btn-border;
-
-//Buttons Alt variable
-$btn-alt-color:              $grey09;
-$btn-alt-bg:                 $gray04;
-$btn-alt-bg-hover:           $gray97;
-$btn-alt-bg-active:          $blue02;
-$btn-alt-border:             $btn-border;
-
-//Buttons Link variable
-$btn-link-bg:                 null;
-$btn-link-border:             null;
 
 //Buttons deafult font size
 $btn-font-size-base:             $font-size-default;
@@ -179,13 +162,6 @@ $modal-header-color           :       $grey09;
 $modal-default-width          :       500px;
 $modal-small-width            :       400px;
 $modal-large-width            :       600px;
-
-//// ************* Interview Difficulty ******///
-$interview-leve1-color              :        $green01;
-$interview-leve2-color              :        $green05;
-$interview-leve3-color              :        $yellow04;
-$interview-leve4-color              :        $yellow02;
-$interview-leve5-color              :        $red02;
 
 ///************** FORMS ********** ///
 $form-input-border              :       $border-color-secondary;

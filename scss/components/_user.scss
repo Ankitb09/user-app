@@ -3,6 +3,22 @@
     background: #fff;
 }
 
+.user-picture {
+    text-align: center;
+    background: $blue03;
+    height: 54px;
+    position: relative;
+    .user-picture-inner {
+        background: #fff;
+        border-radius: 50%;
+        margin-top: 36px;
+        display: inline-block;
+    }
+    .fa-user-circle{
+        font-size: 30px
+    }
+}
+
 .user-details {
     padding: 10px;
 }
@@ -14,9 +30,14 @@
         text-decoration: none;
     }
 }
-.user-sale-details{
+
+.user-sale-details {
     padding: 10px 20%;
-    li{}
-    strong{width: 50%}
-    span{}
+    li {
+        margin: 6px 0
+    }
+    strong {
+        width: 50%;
+        display: inline-block
+    }
 }
