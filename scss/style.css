@@ -801,6 +801,8 @@ input.form-control {
   display: block; }
 .unAuthUser .table-container {
   display: none; }
+.unAuthUser .box-features-outer {
+  display: none; }
 
 .authUser .form-container {
   display: none; }
