@@ -871,6 +871,7 @@ input.form-control {
   .table-grid .table-col {
     display: table-cell;
     padding: 10px;
+    position: relative;
     min-width: 100px;
     margin-bottom: 10px;
     text-align: center;
@@ -880,6 +881,17 @@ input.form-control {
       border-left: 1px solid #DDD; }
     .table-grid .table-col:last-child {
       border-right: 1px solid #DDD; }
+      .table-grid .table-col:last-child::after {
+        content: none; }
+    .table-grid .table-col::after {
+      content: '';
+      border-right: 1px solid #DDD;
+      position: absolute;
+      right: 0;
+      height: 90%;
+      cursor: ew-resize;
+      top: 2px;
+      padding: 0 7px; }
   .table-grid .product-color i {
     border-radius: 50%;
     width: 12px;

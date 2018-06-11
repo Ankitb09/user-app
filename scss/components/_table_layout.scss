@@ -31,11 +31,12 @@
         overflow-y: auto;
     }
     .table-footer {
-        padding:20px 0 0;
+        padding: 20px 0 0;
     }
     .table-col {
         display: table-cell;
         padding: 10px;
+        position: relative;
         min-width: 100px;
         margin-bottom: 10px;
         text-align: center;
@@ -46,6 +47,19 @@
         }
         &:last-child {
             border-right: 1px solid $border-color-secondary;
+            &::after {
+                content: none;
+            }
+        }
+        &::after {
+            content: '';
+            border-right: 1px solid $border-color-secondary;
+            position: absolute;
+            right: 0;
+            height: 90%;
+            cursor: ew-resize;
+            top: 2px;
+            padding: 0 7px;
         }
     }
     .product-color i {
@@ -57,7 +71,10 @@
     }
 }
 
-.resizing{cursor: ew-resize}
+.resizing {
+    cursor: ew-resize
+}
+
 .js-remove-row {
     cursor: pointer;
 }
