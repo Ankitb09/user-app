@@ -32,8 +32,6 @@ $(document).ready(function () {
 })
 
 
-
-
 // Function declarations
 
 function getData() {

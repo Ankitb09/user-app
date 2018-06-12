@@ -91,9 +91,3 @@ var utilities = {
         window.document.cookie = cname + "=" + "; " + expires;//Set the cookie with name and the expiration date
     }
 }
-
-
-
-
-
-
