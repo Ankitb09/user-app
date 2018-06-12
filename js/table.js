@@ -9,7 +9,7 @@ $(document).ready(function () {
         $(this).parent().remove();
     })
 
-    $("#product-table").on('mousedown', '.table-col', (function (e) {
+    $("#product-table").on('mousedown', '.table-head .table-col', (function (e) {
         start = $(this).attr('data-column');
         pressed = true;
         startX = e.pageX;
@@ -49,7 +49,7 @@ function structreCreation(data) {
     var productArr = data.details;
 
     productArr.map((curr, i, arr) => {
-        var tableRowNode = `<div>
+        var tableRowNode = `<div class="table-row">
             <span class="table-col" data-column="1">${i + 1}</span>
             <span class="table-col" data-column="2">${curr.name}</span>
             <span class="table-col" data-column="3">${curr.code}</span>
@@ -69,5 +69,4 @@ function structreCreation(data) {
        </div>`;
         $('#product-table .table-body').append(tableRowNode)
     })
-
 }

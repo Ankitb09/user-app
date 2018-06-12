@@ -891,9 +891,7 @@ input.form-control {
       position: absolute;
       right: 0;
       height: 90%;
-      cursor: ew-resize;
-      top: 2px;
-      padding: 0 7px; }
+      top: 2px; }
   .table-grid .product-color i {
     border-radius: 50%;
     width: 12px;
@@ -906,6 +904,13 @@ input.form-control {
 
 .js-remove-row {
   cursor: pointer; }
+
+.sort-trigger {
+  font-size: 10px; }
+
+.resize-tigger {
+  padding: 0 10px;
+  background: red; }
 
 .ic-money {
   color: #4DCEB9; }

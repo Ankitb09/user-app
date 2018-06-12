@@ -12,13 +12,14 @@
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/user.js"></script>
     <script src="js/table.js"></script>
+
     <title>User Dashboard</title>
 </head>
 
 <body>
     <header class="header">
         <div class="container">
-            <a href="/index.html"><img src="images/servicenow-header-logo.svg" class="brand-logo" /></a>
+            <!--<a href="/index.html"><img src="images/servicenow-header-logo.svg" class="brand-logo" /></a>-->
             <a href="#" class="fl-right btn-logout">
                 <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
         </div>
@@ -27,7 +28,7 @@
         <div class="unAuth-message">
             <a href="/index.html">Please Signin to Access your profile</a>
         </div>
-        <div class="clearfix box-features-outer">
+        <!--<div class="clearfix box-features-outer">
             <div class="box-container col-2 box-features">
                 <i class="ic-money fa fa-money fl" aria-hidden="true"></i>
                 <div class="feature-details">
@@ -56,20 +57,57 @@
                     <small>Followers</small>
                 </div>
             </div>
-        </div>
+        </div>-->
         <div class="table-container">
             <h3>Product List</h3>
             <ul id="product-table" class="table-grid table-content">
                 <li class="table-head">
                     <div>
-                        <span class="table-col" data-column="1">#</span>
-                        <span class="table-col" data-column="2">Name</span>
-                        <span class="table-col" data-column="3">Code </span>
-                        <span class="table-col" data-column="4">Size </span>
-                        <span class="table-col" data-column="5">Price </span>
-                        <span class="table-col" data-column="6">Color </span>
-                        <span class="table-col" data-column="7">Available </span>
-                        <span class="table-col" data-column="8">#</span>
+                        <span class="table-col" data-column="1">#
+                            <small class="sort-trigger">
+                                <i class="fa fa-sort" aria-hidden="true"></i>
+                            </small>
+                            <small class="resize-tigger"></small>
+                        </span>
+                        <span class="table-col" data-column="2">Name
+                            <small class="sort-trigger">
+                                <i class="fa fa-sort" aria-hidden="true"></i>
+                            </small>
+                            <small class="resize-tigger"></small>
+                        </span>
+                        <span class="table-col" data-column="3">Code
+                            <small class="sort-trigger">
+                                <i class="fa fa-sort" aria-hidden="true"></i>
+                            </small>
+                            <small class="resize-tigger"></small>
+                        </span>
+                        <span class="table-col" data-column="4">Size
+                            <small class="sort-trigger">
+                                <i class="fa fa-sort" aria-hidden="true"></i>
+                            </small>
+                            <small class="resize-tigger"></small>
+                        </span>
+                        <span class="table-col" data-column="5">Price
+                            <small class="sort-trigger">
+                                <i class="fa fa-sort" aria-hidden="true"></i>
+                            </small>
+                            <small class="resize-tigger"></small>
+                        </span>
+                        <span class="table-col" data-column="6">Color
+                            <small class="sort-trigger">
+                                <i class="fa fa-sort" aria-hidden="true"></i>
+                            </small>
+                            <small class="resize-tigger"></small>
+                        </span>
+                        <span class="table-col" data-column="7">Available
+                            <small class="sort-trigger">
+                                <i class="fa fa-sort" aria-hidden="true"></i>
+                            </small>
+                            <small class="resize-tigger"></small>
+                        </span>
+                        <span class="table-col" data-column="8">#
+                            <small class="resize-tigger"></small>
+                        </span>
                     </div>
                 </li>
                 <li class="table-body">

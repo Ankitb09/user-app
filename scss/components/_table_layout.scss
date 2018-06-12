@@ -57,9 +57,8 @@
             position: absolute;
             right: 0;
             height: 90%;
-            cursor: ew-resize;
             top: 2px;
-            padding: 0 7px;
+            
         }
     }
     .product-color i {
@@ -77,4 +76,12 @@
 
 .js-remove-row {
     cursor: pointer;
+}
+
+.sort-trigger{
+    font-size: 10px;
+}
+.resize-tigger{
+    padding: 0 10px;
+    background: red;
 }
