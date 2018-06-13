@@ -1,0 +1,33 @@
+/// <reference path = "../abstracts/__abstracts.scss">
+.modal {
+    background: #fff;
+    padding: 20px;
+    position: absolute;
+    border: 1px solid $form-input-border;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    max-width: 840px;
+    width: 100%;
+    z-index: 999;
+    .container {
+        max-width: 820px;
+    }
+    .close {
+        float: right;
+        padding: 0 10px;
+    }
+    .modal-head {
+        padding-bottom: 20px
+    }
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+}

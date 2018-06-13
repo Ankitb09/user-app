@@ -1,0 +1,25 @@
+/// <reference path = "../abstracts/__abstracts.scss">
+.container-add-left {
+    float: left;
+    width: 50%;
+    padding-right: 2%;
+}
+
+.container-add-right {
+    float: left;
+    width: 50%;
+    padding-left: 2%;
+}
+
+.img-uploader {
+    text-align: center;padding: 20px;
+    min-height: 120px;
+    margin-bottom: 15px;
+    line-height: 70px;
+    border: 1px dashed $form-input-focus-border;
+
+    .fa{
+        color: #3591CF
+    }
+}
+

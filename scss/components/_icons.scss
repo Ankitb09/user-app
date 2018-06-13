@@ -15,7 +15,18 @@
 }
 
 .ic-delete {
-    
     cursor: pointer;
     padding: 0 4px;
+}
+
+.asc-order {
+    .fa-sort::before {
+        content: "\f0de"
+    }
+}
+
+.dsc-order {
+    .fa-sort::before {
+        content: "\f0dd"
+    }
 }

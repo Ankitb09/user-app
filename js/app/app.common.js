@@ -62,6 +62,17 @@ APP.common = (function (scope) {
         // tabbing click
         $('.tab-links a').click(function () {
             scope.tabbing($(this))
+        });
+
+        // modal show
+        $('#addProduct').click(function(){
+            $('#addProduct-modal').show();
+            $('.overlay').show();
+        })
+        //modal close
+        $('.modal-head .close').click(function(){
+            $('#addProduct-modal').hide();
+            $('.overlay').hide();
         })
 
     };

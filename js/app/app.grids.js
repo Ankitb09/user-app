@@ -3,6 +3,22 @@
 APP = APP || {};
 APP.grid = (function (scope) {
 
+    var _bindDOMEvents = function () {
+        $('.density-level-1').click(function () {
+            $('.table-col').css({
+                padding: '10px 10px',
+                fontSize: '14px'
+            })
+        });
+
+        $('.density-level-2').click(function () {
+            $('.table-col').css({
+                padding: '13px 10px',
+                fontSize: '15px'
+            })
+        })
+    };
+
     scope.getData = function () {
         var xhr = new XMLHttpRequest();
         const URL = 'data/db.json';
@@ -20,13 +36,13 @@ APP.grid = (function (scope) {
             var tableRowNode = `<div class="table-row">
                 <span class="table-col" data-column="1">${i + 1}</span>
                 <span class="table-col" data-column="2">${curr.name}</span>
-                <span class="table-col" data-column="3">${curr.code}</span>
+                <span class="table-col" data-column="3">#${curr.code}</span>
                 <span class="table-col" data-column="4">
                 ${(curr.size).map((item) => {
                     return `<i>${item}</i>`
                 })}
                 </span>
-                <span class="table-col" data-column="5">${curr.price}</span>
+                <span class="table-col price-col" data-column="5">${curr.price}</span>
                 <span class="table-col product-color" data-column="6">
                 ${(curr.color).map((item) => {
                     return `<i style=${`background-color:${item}`}></i>`
@@ -57,7 +73,9 @@ APP.grid = (function (scope) {
         document.addEventListener('mousemove', function (e) {
             if (thElm) {
                 thElm.parentNode.style.width = startOffset + e.pageX + 'px';
+                thElm.parentNode.style.maxWidth = startOffset + e.pageX + 'px';
                 $(`span[data-column="${colElems}"]`).width(startOffset + e.pageX);
+                $(`span[data-column="${colElems}"]`).css('max-width', startOffset + e.pageX);
             }
         });
 
@@ -135,11 +153,26 @@ APP.grid = (function (scope) {
                     console.log(aa < bb ? -1 : (aa > bb ? 1 : 0));
                     return aa < bb ? -1 : (aa > bb ? 1 : 0);
                 });
+
+                //Removing class from head column
+                [].forEach.call(mainElem, function (el) {
+                    el.classList.remove("asc-order");
+                    el.classList.remove("dsc-order");
+                });
                 if (sortOrder == "asc") {
                     list.reverse();
-                    this.setAttribute('data-order', 'dsc')
+                    this.setAttribute('data-order', 'dsc');
+
+                    if (this.classList) {
+                        this.classList.add("asc-order");
+                        this.classList.remove("dsc-order");
+                    };
                 }
                 if (sortOrder == "dsc") {
+                    if (this.classList) {
+                        this.classList.add("dsc-order");
+                        this.classList.remove("asc-order");
+                    };
                     this.setAttribute('data-order', 'asc')
                 }
 
@@ -151,6 +184,7 @@ APP.grid = (function (scope) {
     }
 
     scope.init = function () {
+        _bindDOMEvents();
         scope.resizeCols();
         scope.getData();
         scope.deleteColumn();

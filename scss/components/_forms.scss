@@ -27,6 +27,13 @@ input.form-control {
     padding: 6px 30px 6px 12px
 }
 
+textarea.form-control{
+    padding: 15px;
+    resize: vertical;
+    height: auto;
+    min-height: 142px;
+}
+
 //// floating labels
 .label-float {
     position: relative;
@@ -47,4 +54,9 @@ input.form-control {
         font-size: 11px;
         top: 1px;
     }
+}
+
+.label-inline label{
+    font-weight: 600;
+    padding-right: 10px;
 }

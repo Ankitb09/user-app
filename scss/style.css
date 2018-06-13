@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /******** Button Tabs **********/
 *,
 *::before,
@@ -392,6 +393,9 @@ h5, .h5 {
 .font-italic {
   font-style: italic; }
 
+.font-semi-bold {
+  font-weight: 600; }
+
 /*Text align*/
 .text-center {
   text-align: center; }
@@ -603,6 +607,12 @@ h5, .h5 {
 input.form-control {
   padding: 6px 30px 6px 12px; }
 
+textarea.form-control {
+  padding: 15px;
+  resize: vertical;
+  height: auto;
+  min-height: 142px; }
+
 .label-float {
   position: relative; }
   .label-float label {
@@ -619,6 +629,10 @@ input.form-control {
   .label-float .filled ~ label {
     font-size: 11px;
     top: 1px; }
+
+.label-inline label {
+  font-weight: 600;
+  padding-right: 10px; }
 
 /*******Button CSS : Starts*********/
 .btn {
@@ -832,7 +846,8 @@ input.form-control {
   font-weight: 600;
   text-align: center; }
   .user-name a {
-    text-decoration: none; }
+    text-decoration: none;
+    text-transform: capitalize; }
 
 .user-sale-details {
   padding: 10px 20%; }
@@ -855,13 +870,12 @@ input.form-control {
   border-spacing: 0 6px;
   width: 100%; }
   .table-grid .ic-delete {
-    display: none;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    font-size: 14px; }
+    visibility: hidden;
+    font-size: 14px;
+    float: right;
+    color: #3591CF; }
   .table-grid:hover .ic-delete {
-    display: inline-block; }
+    visibility: visible; }
   .table-grid li > div {
     overflow: hidden;
     display: table;
@@ -871,7 +885,13 @@ input.form-control {
   .table-grid .table-head {
     font-weight: 600; }
     .table-grid .table-head .table-col {
+      cursor: pointer;
       background: #f1f1f1; }
+    .table-grid .table-head .fa-sort {
+      float: left;
+      font-size: 12px;
+      color: #3591CF;
+      padding: 6px 6px 0 0; }
   .table-grid .table-body {
     width: 100%;
     max-height: 215px;
@@ -912,6 +932,20 @@ input.form-control {
 .resizing {
   cursor: ew-resize; }
 
+.price-col::first-letter {
+  color: #4ECD79;
+  font-weight: 600;
+  font-size: 14px; }
+
+.cont-density {
+  float: right;
+  padding: 20px 10px 0 0;
+  font-size: 15px; }
+  .cont-density .fa {
+    color: #3591CF;
+    padding: 0 2px;
+    cursor: pointer; }
+
 .remove-row {
   cursor: pointer; }
 
@@ -925,6 +959,26 @@ input.form-control {
   right: 0;
   bottom: 0;
   cursor: col-resize; }
+
+.container-add-left {
+  float: left;
+  width: 50%;
+  padding-right: 2%; }
+
+.container-add-right {
+  float: left;
+  width: 50%;
+  padding-left: 2%; }
+
+.img-uploader {
+  text-align: center;
+  padding: 20px;
+  min-height: 120px;
+  margin-bottom: 15px;
+  line-height: 70px;
+  border: 1px dashed #3591CF; }
+  .img-uploader .fa {
+    color: #3591CF; }
 
 .ic-money {
   color: #4DCEB9; }
@@ -942,6 +996,38 @@ input.form-control {
   cursor: pointer;
   padding: 0 4px; }
 
-/*******************************************Common Components : Ends *******************************************/
+.asc-order .fa-sort::before {
+  content: ""; }
+
+.dsc-order .fa-sort::before {
+  content: ""; }
+
+.modal {
+  background: #fff;
+  padding: 20px;
+  position: absolute;
+  border: 1px solid #DDD;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  max-width: 840px;
+  width: 100%;
+  z-index: 999; }
+  .modal .container {
+    max-width: 820px; }
+  .modal .close {
+    float: right;
+    padding: 0 10px; }
+  .modal .modal-head {
+    padding-bottom: 20px; }
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5); }
 
 /*# sourceMappingURL=style.css.map */

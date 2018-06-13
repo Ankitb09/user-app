@@ -13,6 +13,9 @@ APP.user = (function (scope) {
             return false;
         });
 
+        var userCredentials = APP.utilities.getStorage('user');
+        document.querySelector('.user-name a').innerHTML = `Hello ${userCredentials.name}`
+
         $('#js-form-signup').submit(function (e) {
             scope.signUp();
         });
