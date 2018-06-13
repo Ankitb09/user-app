@@ -11,6 +11,18 @@
     cursor: default;
     border-spacing: 0 6px;
     width: 100%;
+    .ic-delete {
+        display: none;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: 14px;
+    }
+    &:hover {
+        .ic-delete {
+            display: inline-block;
+        }
+    }
     li>div {
         overflow: hidden;
         display: table;
@@ -75,15 +87,15 @@
     cursor: ew-resize
 }
 
-.js-remove-row {
+.remove-row {
     cursor: pointer;
 }
 
-.trigger-sort {
+.elem-sort {
     font-size: 10px;
 }
 
-.tigger-resize {
+.trigger-resize {
     position: absolute;
     width: 9px;
     top: 0;

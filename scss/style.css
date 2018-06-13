@@ -854,6 +854,14 @@ input.form-control {
   cursor: default;
   border-spacing: 0 6px;
   width: 100%; }
+  .table-grid .ic-delete {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 14px; }
+  .table-grid:hover .ic-delete {
+    display: inline-block; }
   .table-grid li > div {
     overflow: hidden;
     display: table;
@@ -904,13 +912,13 @@ input.form-control {
 .resizing {
   cursor: ew-resize; }
 
-.js-remove-row {
+.remove-row {
   cursor: pointer; }
 
-.trigger-sort {
+.elem-sort {
   font-size: 10px; }
 
-.tigger-resize {
+.trigger-resize {
   position: absolute;
   width: 9px;
   top: 0;
@@ -929,6 +937,10 @@ input.form-control {
 
 .ic-users {
   color: #F7971D; }
+
+.ic-delete {
+  cursor: pointer;
+  padding: 0 4px; }
 
 /*******************************************Common Components : Ends *******************************************/
 

@@ -62,57 +62,74 @@
             <ul id="product-table" class="table-grid table-content">
                 <li class="table-head">
                     <div>
-                        <span class="table-col" data-column="1">#
-                            <small class="trigger-sort-">
+                        <span class="table-col" data-order="dsc" data-column="1">#
+                            <small class="js-sort">
                                 <i class="fa fa-sort" aria-hidden="true"></i>
                             </small>
-                            <small class="trigger-delete"></small>
-                            <small class="tigger-resize"></small>
+                            <small class="js-delete ic-delete">
+                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                            </small>
+                            <small class="elem-resize"></small>
                         </span>
-                        <span class="table-col" data-column="2">Name
-                            <small class="trigger-sort-">
+                        <span class="table-col" data-order="asc" data-column="2">Name
+                            <small class="js-sort">
                                 <i class="fa fa-sort" aria-hidden="true"></i>
                             </small>
-                            <small class="trigger-delete"></small>
-                            <small class="tigger-resize"></small>
+                            <small class="js-delete ic-delete">
+                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                            </small>
+                            <small class="trigger-resize"></small>
                         </span>
-                        <span class="table-col" data-column="3">Code
-                            <small class="trigger-sort-">
+                        <span class="table-col" data-order="asc" data-column="3">Code
+                            <small class="js-sort">
                                 <i class="fa fa-sort" aria-hidden="true"></i>
                             </small>
-                            <small class="trigger-delete"></small>
-                            <small class="tigger-resize"></small>
+                            <small class="js-delete ic-delete">
+                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                            </small>
+                            <small class="trigger-resize"></small>
                         </span>
-                        <span class="table-col" data-column="4">Size
-                            <small class="trigger-sort-">
+                        <span class="table-col" data-order="asc" data-column="4">Size
+                            <small class="js-sort">
                                 <i class="fa fa-sort" aria-hidden="true"></i>
                             </small>
-                            <small class="trigger-delete"></small>
-                            <small class="tigger-resize"></small>
+                            <small class="js-delete ic-delete">
+                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                            </small>
+                            <small class="trigger-resize"></small>
                         </span>
-                        <span class="table-col" data-column="5">Price
-                            <small class="trigger-sort-">
+                        <span class="table-col" data-order="asc" data-column="5">Price
+                            <small class="js-sort">
                                 <i class="fa fa-sort" aria-hidden="true"></i>
                             </small>
-                            <small class="trigger-delete"></small>
-                            <small class="tigger-resize"></small>
+                            <small class="js-delete ic-delete">
+                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                            </small>
+                            <small class="trigger-resize"></small>
                         </span>
-                        <span class="table-col" data-column="6">Color
-                            <small class="trigger-sort-">
+                        <span class="table-col" data-order="asc" data-column="6">Color
+                            <small class="js-sort">
                                 <i class="fa fa-sort" aria-hidden="true"></i>
                             </small>
-                            <small class="trigger-delete"></small>
-                            <small class="tigger-resize"></small>
+                            <small class="js-delete ic-delete">
+                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                            </small>
+                            <small class="trigger-resize"></small>
                         </span>
-                        <span class="table-col" data-column="7">Available
-                            <small class="trigger-sort-">
+                        <span class="table-col" data-order="asc" data-column="7">Available
+                            <small class="js-sort">
                                 <i class="fa fa-sort" aria-hidden="true"></i>
                             </small>
-                            <small class="trigger-delete"></small>
-                            <small class="tigger-resize"></small>
+                            <small class="js-delete ic-delete">
+                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                            </small>
+                            <small class="trigger-resize"></small>
                         </span>
-                        <span class="table-col" data-column="8">#
-                            <small class="resize-tigger"></small>
+                        <span class="table-col" data-order="asc" data-column="8">#
+                            <small class="trigger-resize"></small>
+                            <small class="js-delete ic-delete">
+                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                            </small>
                         </span>
                     </div>
                 </li>
@@ -128,7 +145,6 @@
     <script src="js/app/app.user.js"></script>
     <script src="js/app/app.common.js"></script>
     <script src="js/app/app.grids.js"></script>
-    <script src="js/app/sort.js"></script>
     <script>
         $(document).ready(function () {
             APP.common.init();

@@ -2,6 +2,7 @@
 
 APP = APP || {};
 APP.grid = (function (scope) {
+
     scope.getData = function () {
         var xhr = new XMLHttpRequest();
         const URL = 'data/db.json';
@@ -32,7 +33,7 @@ APP.grid = (function (scope) {
                 }).join('')}
                 </span>
                 <span class="table-col" data-column="7">${curr.productCount} items</span>
-                <span class="table-col js-remove-row" data-column="8" title="delete row">&#10008;</span>
+                <span class="table-col remove-row" data-column="8" title="delete row">&#10008;</span>
            </div>`;
             $('#product-table .table-body').append(tableRowNode)
         })
@@ -43,7 +44,7 @@ APP.grid = (function (scope) {
         var startOffset;
         var colElems;
         Array.prototype.forEach.call(
-            document.querySelectorAll(".tigger-resize"),
+            document.querySelectorAll(".trigger-resize"),
             function (th) {
                 //th.style.position = 'relative';
                 th.addEventListener('mousedown', function (e) {
@@ -94,14 +95,58 @@ APP.grid = (function (scope) {
 
     scope.deleteRow = function () {
         // Delete Row
-        $('#product-table').on('click', '.js-remove-row', function () {
+        $('#product-table').on('click', '.remove-row', function () {
             $(this).parent().remove();
         })
     }
     scope.deleteColumn = function () {
         // Delete Column
-        $('#product-table').on('click', '.js-remove-col', function () {
-            $(this).parent().remove();
+        $('.js-delete').on('click', function () {
+            var clickedElem = $(this).parent().attr('data-column');
+            $('[data-column="' + clickedElem + '"]').remove()
+        })
+    }
+
+    scope.sort = function () {
+        var container = document.getElementsByClassName("table-body")[0];
+        var mainElem = document.querySelectorAll('.table-head .table-col');
+        var clickedElem;
+        function insertBefore(el, referenceNode) {
+            referenceNode.parentNode.insertBefore(el, referenceNode);
+        }
+
+        Array.prototype.forEach.call(mainElem, function (elem) {
+            elem.addEventListener('click', function () {
+
+                var contents = container.querySelectorAll(".table-row");
+                var sortOrder = this.getAttribute('data-order');
+                clickedElem = this.getAttribute('data-column');
+
+
+                var elems = container.querySelectorAll('[data-column="' + clickedElem + '"]');
+                var list = [];
+                for (var i = 0; i < contents.length; i++) {
+                    list.push(elems[i]);
+                }
+
+                list.sort(function (a, b) {
+                    var aa = parseInt(a.innerText);
+                    var bb = parseInt(b.innerText);
+                    console.log(aa < bb ? -1 : (aa > bb ? 1 : 0));
+                    return aa < bb ? -1 : (aa > bb ? 1 : 0);
+                });
+                if (sortOrder == "asc") {
+                    list.reverse();
+                    this.setAttribute('data-order', 'dsc')
+                }
+                if (sortOrder == "dsc") {
+                    this.setAttribute('data-order', 'asc')
+                }
+
+                for (var i = 0; i < list.length; i++) {
+                    insertBefore(list[i].parentNode, container.firstChild);
+                }
+            })
         })
     }
 
@@ -110,6 +155,7 @@ APP.grid = (function (scope) {
         scope.getData();
         scope.deleteColumn();
         scope.deleteRow();
+        scope.sort()
     }
 
     return scope;
