@@ -1,16 +1,16 @@
+"use strict";
+
 // global variable go here
 
-
-
 // execute functions here
-window.onload = setUp;
-
-$('.tab-links a').click(function () {
-    tabbing($(this))
+$(document).ready(function () {
+    setUp()
 })
+
 
 //=========== function defination goes here ==============
 function setUp() {
+
     // tabbing for signin/register
     tabbing($('.tab-links li.active a'))
 
@@ -19,6 +19,12 @@ function setUp() {
     $('.label-float input').on('blur', function () {
         labelFloat($(this))
     });
+
+    // tabbing click
+    $('.tab-links a').click(function () {
+        tabbing($(this))
+    })
+
 }
 
 

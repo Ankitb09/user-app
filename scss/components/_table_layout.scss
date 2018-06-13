@@ -37,8 +37,10 @@
         display: table-cell;
         padding: 10px;
         position: relative;
-        min-width: 100px;
+        width: 100px;
         margin-bottom: 10px;
+        max-width: 100px;
+        word-wrap: break-word;
         text-align: center;
         border-top: 1px solid $border-color-secondary;
         border-bottom: 1px solid $border-color-secondary;
@@ -56,9 +58,8 @@
             border-right: 1px solid $border-color-secondary;
             position: absolute;
             right: 0;
-            height: 90%;
+            height: 93%;
             top: 2px;
-            
         }
     }
     .product-color i {
@@ -78,10 +79,15 @@
     cursor: pointer;
 }
 
-.sort-trigger{
+.trigger-sort {
     font-size: 10px;
 }
-.resize-tigger{
-    padding: 0 10px;
-    background: red;
+
+.tigger-resize {
+    position: absolute;
+    width: 9px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    cursor: col-resize;
 }

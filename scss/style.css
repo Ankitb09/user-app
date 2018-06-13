@@ -874,8 +874,10 @@ input.form-control {
     display: table-cell;
     padding: 10px;
     position: relative;
-    min-width: 100px;
+    width: 100px;
     margin-bottom: 10px;
+    max-width: 100px;
+    word-wrap: break-word;
     text-align: center;
     border-top: 1px solid #DDD;
     border-bottom: 1px solid #DDD; }
@@ -890,7 +892,7 @@ input.form-control {
       border-right: 1px solid #DDD;
       position: absolute;
       right: 0;
-      height: 90%;
+      height: 93%;
       top: 2px; }
   .table-grid .product-color i {
     border-radius: 50%;
@@ -905,12 +907,16 @@ input.form-control {
 .js-remove-row {
   cursor: pointer; }
 
-.sort-trigger {
+.trigger-sort {
   font-size: 10px; }
 
-.resize-tigger {
-  padding: 0 10px;
-  background: red; }
+.tigger-resize {
+  position: absolute;
+  width: 9px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  cursor: col-resize; }
 
 .ic-money {
   color: #4DCEB9; }
