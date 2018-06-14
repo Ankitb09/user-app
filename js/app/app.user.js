@@ -14,7 +14,9 @@ APP.user = (function (scope) {
         });
 
         var userCredentials = APP.utilities.getStorage('user');
-        document.querySelector('.user-name a').innerHTML = `Hello ${userCredentials.name}`
+        if (document.querySelector('.user-name a') != null) {
+            document.querySelector('.user-name a').innerHTML = `Hello ${userCredentials.name}`
+        }
 
         $('#js-form-signup').submit(function (e) {
             scope.signUp();
@@ -23,7 +25,7 @@ APP.user = (function (scope) {
         $('.btn-logout').click(function () {
             APP.utilities.deleteCookie('user');
             window.location = '/index.html'
-        })
+        });
     }
 
     scope.signIn = function (thisElem) {

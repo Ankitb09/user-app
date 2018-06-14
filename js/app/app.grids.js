@@ -149,9 +149,18 @@ APP.grid = (function (scope) {
                     }
 
                     list.sort(function (a, b) {
-                        var aa = parseInt(a.innerText);
-                        var bb = parseInt(b.innerText);
-                        return aa < bb ? -1 : (aa > bb ? 1 : 0);
+                        var reA = /[^a-zA-Z]/g;
+                        var reN = /[^0-9]/g;
+                        var aA = a.innerText.replace(reA, "");
+                        var bA = b.innerText.replace(reA, "");
+                        if (aA === bA) {
+                            var aN = parseInt(a.innerText.replace(reN, ""), 10);
+                            var bN = parseInt(b.innerText.replace(reN, ""), 10);
+                            return aN === bN ? 0 : aN > bN ? 1 : -1;
+                        } else {
+                            return aA > bA ? 1 : -1;
+                        }
+
                     });
 
                     //Removing class from head column
