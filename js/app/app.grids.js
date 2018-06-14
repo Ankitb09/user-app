@@ -134,50 +134,51 @@ APP.grid = (function (scope) {
         }
 
         Array.prototype.forEach.call(mainElem, function (elem) {
-            elem.addEventListener('click', function () {
+            elem.addEventListener('click', function (event) {
+                if (event.target.tagName == 'SPAN' || event.target.tagName == 'EM') {
 
-                var contents = container.querySelectorAll(".table-row");
-                var sortOrder = this.getAttribute('data-order');
-                clickedElem = this.getAttribute('data-column');
+                    var contents = container.querySelectorAll(".table-row");
+                    var sortOrder = this.getAttribute('data-order');
+                    clickedElem = this.getAttribute('data-column');
 
 
-                var elems = container.querySelectorAll('[data-column="' + clickedElem + '"]');
-                var list = [];
-                for (var i = 0; i < contents.length; i++) {
-                    list.push(elems[i]);
-                }
+                    var elems = container.querySelectorAll('[data-column="' + clickedElem + '"]');
+                    var list = [];
+                    for (var i = 0; i < contents.length; i++) {
+                        list.push(elems[i]);
+                    }
 
-                list.sort(function (a, b) {
-                    var aa = parseInt(a.innerText);
-                    var bb = parseInt(b.innerText);
-                    console.log(aa < bb ? -1 : (aa > bb ? 1 : 0));
-                    return aa < bb ? -1 : (aa > bb ? 1 : 0);
-                });
+                    list.sort(function (a, b) {
+                        var aa = parseInt(a.innerText);
+                        var bb = parseInt(b.innerText);
+                        return aa < bb ? -1 : (aa > bb ? 1 : 0);
+                    });
 
-                //Removing class from head column
-                [].forEach.call(mainElem, function (el) {
-                    el.classList.remove("asc-order");
-                    el.classList.remove("dsc-order");
-                });
-                if (sortOrder == "asc") {
-                    list.reverse();
-                    this.setAttribute('data-order', 'dsc');
+                    //Removing class from head column
+                    [].forEach.call(mainElem, function (el) {
+                        el.classList.remove("asc-order");
+                        el.classList.remove("dsc-order");
+                    });
+                    if (sortOrder == "asc") {
+                        list.reverse();
+                        this.setAttribute('data-order', 'dsc');
 
-                    if (this.classList) {
-                        this.classList.add("asc-order");
-                        this.classList.remove("dsc-order");
-                    };
-                }
-                if (sortOrder == "dsc") {
-                    if (this.classList) {
-                        this.classList.add("dsc-order");
-                        this.classList.remove("asc-order");
-                    };
-                    this.setAttribute('data-order', 'asc')
-                }
+                        if (this.classList) {
+                            this.classList.add("asc-order");
+                            this.classList.remove("dsc-order");
+                        };
+                    }
+                    if (sortOrder == "dsc") {
+                        if (this.classList) {
+                            this.classList.add("dsc-order");
+                            this.classList.remove("asc-order");
+                        };
+                        this.setAttribute('data-order', 'asc')
+                    }
 
-                for (var i = 0; i < list.length; i++) {
-                    insertBefore(list[i].parentNode, container.firstChild);
+                    for (var i = 0; i < list.length; i++) {
+                        insertBefore(list[i].parentNode, container.firstChild);
+                    }
                 }
             })
         })

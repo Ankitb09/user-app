@@ -12,14 +12,23 @@
 }
 
 .img-uploader {
-    text-align: center;padding: 20px;
+    text-align: center;
+    padding: 20px;
     min-height: 120px;
     margin-bottom: 15px;
-    line-height: 70px;
+    padding-top: 30px;
+    cursor: pointer;
     border: 1px dashed $form-input-focus-border;
-
-    .fa{
+    .fa {
         color: #3591CF
     }
 }
 
+.img-placeholder {
+    display: none;
+    text-align: center;
+    margin-bottom: 15px;
+    img {
+        max-width: 170px;
+    }
+}

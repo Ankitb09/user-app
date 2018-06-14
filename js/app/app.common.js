@@ -36,11 +36,21 @@ APP.utilities = (function (scope) {
 
     scope.deleteCookie = function (cname) {
         var d = new Date();
-        d.setTime(d.getTime() - (1000 * 60 * 60 * 24)); //Set the time to the past. 1000 milliseonds = 1 second
-        var expires = "expires=" + d.toGMTString(); //Compose the expirartion date
-        window.document.cookie = cname + "=" + "; " + expires;//Set the cookie with name and the expiration date
+        d.setTime(d.getTime() - (1000 * 60 * 60 * 24));
+        var expires = "expires=" + d.toGMTString();
+        window.document.cookie = cname + "=" + "; " + expires;
     }
 
+    scope.checkPlatform = function () {
+        var userAgent = window.navigator.userAgent,
+            platform = window.navigator.platform,
+            windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
+            os = null;
+        if (windowsPlatforms.indexOf(platform) !== -1) {
+            os = 'Windows';
+        }
+        return os;
+    }
     return scope;
 
 }(APP.utilities || {}))
@@ -65,15 +75,24 @@ APP.common = (function (scope) {
         });
 
         // modal show
-        $('#addProduct').click(function(){
+        $('#addProduct').click(function () {
             $('#addProduct-modal').show();
             $('.overlay').show();
         })
         //modal close
-        $('.modal-head .close').click(function(){
+        $('.modal-head .close').click(function () {
             $('#addProduct-modal').hide();
             $('.overlay').hide();
-        })
+        });
+
+        $('.img-uploader').click(function () {
+            $('.img-uploader-outer').hide();
+            $('.img-placeholder').show()
+        });
+
+        if (APP.utilities.checkPlatform() == 'Windows') {
+            document.getElementsByTagName('body')[0].className += ' windows'
+        }
 
     };
 

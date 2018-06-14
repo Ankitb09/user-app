@@ -892,6 +892,8 @@ textarea.form-control {
       font-size: 12px;
       color: #3591CF;
       padding: 6px 6px 0 0; }
+    .windows .table-head {
+      padding: 0 17px 0 0; }
   .table-grid .table-body {
     width: 100%;
     max-height: 215px;
@@ -975,10 +977,18 @@ textarea.form-control {
   padding: 20px;
   min-height: 120px;
   margin-bottom: 15px;
-  line-height: 70px;
+  padding-top: 30px;
+  cursor: pointer;
   border: 1px dashed #3591CF; }
   .img-uploader .fa {
     color: #3591CF; }
+
+.img-placeholder {
+  display: none;
+  text-align: center;
+  margin-bottom: 15px; }
+  .img-placeholder img {
+    max-width: 170px; }
 
 .ic-money {
   color: #4DCEB9; }
