@@ -22,12 +22,15 @@ APP.user = (function (scope) {
             scope.signUp();
         });
 
+        // Logout
         $('.btn-logout').click(function () {
             APP.utilities.deleteCookie('user');
             window.location = '/index.html'
         });
     }
 
+
+    // Sign In handling 
     scope.signIn = function (thisElem) {
         $('#js-form-signin .error-text').hide(); // hiding error message on submit
         var userName = $('#userName').val();
@@ -41,6 +44,7 @@ APP.user = (function (scope) {
         return true;
     };
 
+    // SignUp/ Registration Flow
     scope.signUp = function () {
         var newUserName = $('#newUser').val();
         var newUserEmail = $('#newEmail').val();

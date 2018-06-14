@@ -17,7 +17,9 @@
 <body>
     <header class="header">
         <div class="container">
-            <!--<a href="/index.html"><img src="images/servicenow-header-logo.svg" class="brand-logo" /></a>-->
+            <a href="/index.html">
+                <img src="images/servicenow-header-logo.svg" class="brand-logo" />
+            </a>
             <a href="#" class="fl-right btn-logout">
                 <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
         </div>
@@ -26,54 +28,73 @@
         <div class="unAuth-message">
             <a href="/index.html">Please Signin to Access your profile</a>
         </div>
-        <!--<div class="clearfix box-features-outer">
-            <div class="box-container col-2 box-features">
-                <i class="ic-money fa fa-money fl" aria-hidden="true"></i>
-                <div class="feature-details">
-                    <span>$20,000</span>
-                    <small>Total Earnings</small>
+        <div class="user-profile inner-profile">
+            <div class="user-picture">
+                <span class="user-picture-inner">
+                    <i class="fa fa-user-circle" aria-hidden="true"></i>
+                </span>
+            </div>
+            <div class="user-details">
+                <h3 class="user-name">
+                    <a href="/index.html">Hello USER</a>
+                </h3>
+                <h4 class="user-profession text-center">Cloth Wholeseller</h4>
+                <p class="user-description text-sm text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s,</p>
+            </div>
+            <div class="clearfix box-features-outer">
+                <div class="box-container col-2 box-features">
+                    <i class="ic-money fa fa-money fl" aria-hidden="true"></i>
+                    <div class="feature-details">
+                        <span>$20,000</span>
+                        <small>Total Earnings</small>
+                    </div>
+                </div>
+                <div class="box-container col-2 box-features">
+                    <i class="fa fa-cart-plus ic-products" aria-hidden="true"></i>
+                    <div class="feature-details">
+                        <span>1000</span>
+                        <small>Total Items</small>
+                    </div>
+                </div>
+                <div class="box-container col-2 box-features">
+                    <i class="fa fa-users ic-users" aria-hidden="true"></i>
+                    <div class="feature-details">
+                        <span>700</span>
+                        <small>Total Clients</small>
+                    </div>
+                </div>
+                <div class="box-container col-2 box-features">
+                    <i class="fa fa-heart ic-followers" aria-hidden="true"></i>
+                    <div class="feature-details">
+                        <span>300</span>
+                        <small>Followers</small>
+                    </div>
                 </div>
             </div>
-            <div class="box-container col-2 box-features">
-                <i class="fa fa-cart-plus ic-products" aria-hidden="true"></i>
-                <div class="feature-details">
-                    <span>1000</span>
-                    <small>Total Items</small>
-                </div>
-            </div>
-            <div class="box-container col-2 box-features">
-                <i class="fa fa-users ic-users" aria-hidden="true"></i>
-                <div class="feature-details">
-                    <span>700</span>
-                    <small>Total Clients</small>
-                </div>
-            </div>
-            <div class="box-container col-2 box-features">
-                <i class="fa fa-heart ic-followers" aria-hidden="true"></i>
-                <div class="feature-details">
-                    <span>300</span>
-                    <small>Followers</small>
-                </div>
-            </div>
-        </div>-->
+        </div>
+
         <div class="table-container">
-            <div class="cont-density" title="Adjust Display Density">
-                <span class="density-level-1">
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                </span>
-                <span class="density-level-2">
-                    <i class="fa fa-align-justify" aria-hidden="true"></i>
-                </span>
-            </div>
             <h3>Product List</h3>
+            <div class="">
+                <button id="bulk-delete-rows" disabled class="btn btn-sm btn-secondary">Delete Selected</button>
+                <div class="cont-density" title="Adjust Display Density">
+                    <span class="density-level-1">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </span>
+                    <span class="density-level-2">
+                        <i class="fa fa-align-justify" aria-hidden="true"></i>
+                    </span>
+                </div>
+            </div>
             <ul id="product-table" class="table-grid table-content">
                 <li class="table-head">
                     <div>
                         <span class="table-col" data-order="dsc" data-column="1">
-                            <input type="checkbox" id="master-checkbox"/>
+                            <input type="checkbox" id="master-checkbox" />
                             <small class="trigger-resize"></small>
                         </span>
-                        <span class="table-col" data-order="dsc" data-column="2">#
+                        <span class="table-col js-sortable" data-order="dsc" data-column="2">#
                             <small class="js-sort">
                                 <em class="fa fa-sort" aria-hidden="true"></em>
                             </small>
@@ -82,7 +103,7 @@
                             </small>
                             <small class="trigger-resize"></small>
                         </span>
-                        <span class="table-col" data-order="asc" data-column="3">Name
+                        <span class="table-col js-sortable" data-order="asc" data-column="3">Name
                             <small class="js-sort">
                                 <em class="fa fa-sort" aria-hidden="true"></em>
                             </small>
@@ -91,7 +112,7 @@
                             </small>
                             <small class="trigger-resize"></small>
                         </span>
-                        <span class="table-col" data-order="asc" data-column="4">Code
+                        <span class="table-col js-sortable" data-order="asc" data-column="4">Code
                             <small class="js-sort">
                                 <em class="fa fa-sort" aria-hidden="true"></em>
                             </small>
@@ -100,7 +121,7 @@
                             </small>
                             <small class="trigger-resize"></small>
                         </span>
-                        <span class="table-col" data-order="asc" data-column="5">Size
+                        <span class="table-col js-sortable" data-order="asc" data-column="5">Size
                             <small class="js-sort">
                                 <em class="fa fa-sort" aria-hidden="true"></em>
                             </small>
@@ -109,7 +130,7 @@
                             </small>
                             <small class="trigger-resize"></small>
                         </span>
-                        <span class="table-col" data-order="asc" data-column="6">Price
+                        <span class="table-col js-sortable" data-order="asc" data-column="6">Price
                             <small class="js-sort">
                                 <em class="fa fa-sort" aria-hidden="true"></em>
                             </small>
@@ -118,7 +139,7 @@
                             </small>
                             <small class="trigger-resize"></small>
                         </span>
-                        <span class="table-col" data-order="asc" data-column="7">Color
+                        <span class="table-col js-sortable" data-order="asc" data-column="7">Color
                             <small class="js-sort">
                                 <em class="fa fa-sort" aria-hidden="true"></em>
                             </small>
@@ -127,7 +148,7 @@
                             </small>
                             <small class="trigger-resize"></small>
                         </span>
-                        <span class="table-col" data-order="asc" data-column="8">Available
+                        <span class="table-col js-sortable" data-order="asc" data-column="8">Available
                             <small class="js-sort">
                                 <em class="fa fa-sort" aria-hidden="true"></em>
                             </small>

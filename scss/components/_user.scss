@@ -1,6 +1,11 @@
 /// <reference path = "../abstracts/__abstracts.scss">
 .user-profile {
     background: #fff;
+    &.inner-profile {
+        margin-top: 30px;
+        padding: 0 0 20px 0;
+        box-shadow: none;
+    }
 }
 
 .user-picture {
@@ -14,7 +19,7 @@
         margin-top: 36px;
         display: inline-block;
     }
-    .fa-user-circle{
+    .fa-user-circle {
         font-size: 30px
     }
 }

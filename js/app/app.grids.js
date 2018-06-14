@@ -19,6 +19,7 @@ APP.grid = (function (scope) {
         })
     };
 
+    // Getting data from db.json
     scope.getData = function () {
         var xhr = new XMLHttpRequest();
         const URL = 'data/db.json';
@@ -30,6 +31,7 @@ APP.grid = (function (scope) {
         xhr.send();
     };
 
+    // Grid Structure Creation
     scope.structreCreation = function (data) {
         var productArr = data.products;
         productArr.map((curr, i, arr) => {
@@ -58,6 +60,7 @@ APP.grid = (function (scope) {
         })
     };
 
+    // Column resizing from header cells
     scope.resizeCols = function () {
         var thElm;
         var startOffset;
@@ -86,46 +89,59 @@ APP.grid = (function (scope) {
             thElm = undefined;
         });
 
-
-
-
-        // var pressed = false;
-        // var start = undefined;
-        // var startX, startWidth;
-        // $("#product-table").on('mousedown', '.table-head .table-col', (function (e) {
-        //     start = $(this).attr('data-column');
-        //     pressed = true;
-        //     startX = e.pageX;
-        //     startWidth = $(this).width();
-        //     $(`span[data-column="${start}"]`).addClass("resizing");
-        // }));
-
-        // $("#product-table").mousemove(function (e) {
-        //     if (pressed) {
-        //         $(`span[data-column="${start}"]`).width(startWidth + (e.pageX - startX));
-        //     }
-        // });
-
-        // $("#product-table").mouseup(function () {
-        //     if (pressed) {
-        //         $(`span[data-column="${start}"]`).removeClass("resizing");
-        //         pressed = false;
-        //     }
-        // });
     };
 
+    // Multi rows deletion and selection code
     scope.multiRowsOperation = function () {
-        $('#master-checkbox').click(function(){
-            
-        })
+        var checkboxesStatus = function () {
+            var total = $('.main-row-checkbox').length;
+            var checked = $('.main-row-checkbox:checked').length;
+
+            // giving header checkbox a state (checked/intermediate)***\
+            if (checked == 0) {
+                $('#master-checkbox').prop('checked', false);
+                $('#bulk-delete-rows').attr('disabled', true);
+            }
+            else if (total == checked) {
+                $('#master-checkbox').prop('checked', true);
+                $('#master-checkbox').prop('indeterminate', false);
+            } else if (total > checked && checked > 0) {
+                $('#master-checkbox').prop('indeterminate', true);
+                $('#bulk-delete-rows').attr('disabled', false);
+            } else {
+                $('#master-checkbox').prop('checked', false);
+                $('#master-checkbox').prop('indeterminate', false)
+                $('#bulk-delete-rows').attr('disabled', true);
+            }
+        }
+
+        $('#master-checkbox').on('click', function () {
+            console.log(this.checked)
+            $('.main-row-checkbox').prop('checked', this.checked);
+            $('#bulk-delete-rows').attr('disabled', !(this.checked));
+        });
+
+        $('#product-table').on('change', '.main-row-checkbox', function () {
+            checkboxesStatus()
+        });
+
+        $('#bulk-delete-rows').click(function () {
+            var selectedRows = $('.main-row-checkbox:checked').parents('.table-row');
+            $(selectedRows).remove();
+            checkboxesStatus();
+        });
+
     };
 
+    // Delete single row
     scope.deleteRow = function () {
         // Delete Row
         $('#product-table').on('click', '.remove-row', function () {
             $(this).parent().remove();
         })
     }
+
+    //Delete Column
     scope.deleteColumn = function () {
         // Delete Column
         $('.js-delete').on('click', function () {
@@ -134,9 +150,10 @@ APP.grid = (function (scope) {
         })
     }
 
+    // Sorting on click of Header Cells
     scope.sort = function () {
         var container = document.getElementsByClassName("table-body")[0];
-        var mainElem = document.querySelectorAll('.table-head .table-col');
+        var mainElem = document.querySelectorAll('.js-sortable');
         var clickedElem;
         function insertBefore(el, referenceNode) {
             referenceNode.parentNode.insertBefore(el, referenceNode);
@@ -208,6 +225,7 @@ APP.grid = (function (scope) {
         scope.getData();
         scope.deleteColumn();
         scope.deleteRow();
+        scope.multiRowsOperation();
         scope.sort()
     }
 

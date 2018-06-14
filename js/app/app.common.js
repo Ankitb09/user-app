@@ -78,6 +78,7 @@ APP.common = (function (scope) {
         $('#addProduct').click(function () {
             $('#addProduct-modal').show();
             $('.overlay').show();
+            $('html,body').scrollTop(0);
         })
         //modal close
         $('.modal-head .close').click(function () {
@@ -85,9 +86,10 @@ APP.common = (function (scope) {
             $('.overlay').hide();
         });
 
+        // Image fake uploader
         $('.img-uploader').click(function () {
             $('.img-uploader-outer').hide();
-            $('.img-placeholder').show()
+            $('.img-placeholder').show();
         });
 
         if (APP.utilities.checkPlatform() == 'Windows') {
@@ -96,6 +98,7 @@ APP.common = (function (scope) {
 
     };
 
+    // input label floating effect
     scope.labelFloat = function (elemArr) {
         elemArr.each(function (i, elem) {
             if ($(this).val() !== '') {
@@ -106,6 +109,7 @@ APP.common = (function (scope) {
         })
     };
 
+    // Tabbing 
     scope.tabbing = function (ele) {
         var clickedElem = ele.attr('data-href');
         $('.tab-links li').removeClass('active')

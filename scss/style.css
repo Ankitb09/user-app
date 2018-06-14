@@ -644,7 +644,8 @@ textarea.form-control {
   text-transform: uppercase;
   display: inline-block;
   text-decoration: none;
-  border-radius: 3px; }
+  border-radius: 3px;
+  cursor: pointer; }
   .btn:disabled, .btn.disabled {
     background: #EFEFEF;
     cursor: default;
@@ -807,6 +808,12 @@ textarea.form-control {
   margin-right: 10px;
   vertical-align: middle; }
 
+.unAuth-message {
+  margin: 20px 0 0;
+  border: 1px solid #F1604D;
+  text-align: center;
+  padding: 20px; }
+
 .unAuthUser .btn-logout {
   display: none; }
 .unAuthUser .user-profile {
@@ -825,6 +832,10 @@ textarea.form-control {
 
 .user-profile {
   background: #fff; }
+  .user-profile.inner-profile {
+    margin-top: 30px;
+    padding: 0 0 20px 0;
+    box-shadow: none; }
 
 .user-picture {
   text-align: center;
@@ -880,8 +891,8 @@ textarea.form-control {
     overflow: hidden;
     display: table;
     width: 100%; }
-    .table-grid li > div:hover .table-col {
-      background: #f1f1f1; }
+  .table-grid li:not(.table-head) :hover .table-col {
+    background: #f1f1f1; }
   .table-grid .table-head {
     font-weight: 600; }
     .table-grid .table-head .table-col {
@@ -924,6 +935,8 @@ textarea.form-control {
       right: 0;
       height: 93%;
       top: 2px; }
+    .table-grid .table-col.asc-order, .table-grid .table-col.dsc-order {
+      background: #EEF9FF; }
   .table-grid .product-color i {
     border-radius: 50%;
     width: 12px;
@@ -943,8 +956,8 @@ textarea.form-control {
   font-size: 14px; }
 
 .cont-density {
-  float: right;
-  padding: 20px 10px 0 0;
+  float: left;
+  padding: 4px 20px 0 0;
   font-size: 15px; }
   .cont-density .fa {
     color: #3591CF;

@@ -2,9 +2,9 @@
     "products": [
         {
             "productID": 1,
-            "code": 1342,
-            "name": "T-shirt",
-            "price": "$35",
+            "code": 142,
+            "name": "Shirt",
+            "price": "$125",
             "productCount": 30,
             "size": [
                 "S",
@@ -19,9 +19,9 @@
         },
         {
             "productID": 2,
-            "code": 13342,
+            "code": 172,
             "name": "Trouser",
-            "price": "$135",
+            "price": "$235",
             "productCount": 40,
             "size": [
                 "S",
@@ -35,9 +35,9 @@
         },
         {
             "productID": 3,
-            "code": 1242,
+            "code": 201,
             "name": "Shirt",
-            "price": "$40",
+            "price": "$20",
             "productCount": 301,
             "size": [
                 "M",
@@ -52,7 +52,7 @@
         },
         {
             "productID": 4,
-            "code": 1342,
+            "code": 230,
             "name": "Coat",
             "price": "$345",
             "productCount": 56,
@@ -71,11 +71,11 @@
             ]
         },
         {
-            "productID": 1,
-            "code": 1342,
+            "productID": 5,
+            "code": 301,
             "name": "T-shirt",
-            "price": "$35",
-            "productCount": 30,
+            "price": "$44",
+            "productCount": 34,
             "size": [
                 "S",
                 "M",
@@ -88,11 +88,11 @@
             ]
         },
         {
-            "productID": 2,
-            "code": 13342,
+            "productID": 6,
+            "code": 398,
             "name": "Trouser",
-            "price": "$135",
-            "productCount": 40,
+            "price": "$45",
+            "productCount": 30,
             "size": [
                 "S",
                 "L"
@@ -104,11 +104,11 @@
             ]
         },
         {
-            "productID": 3,
-            "code": 1242,
-            "name": "Shirt",
-            "price": "$40",
-            "productCount": 301,
+            "productID": 7,
+            "code": 421,
+            "name": "Coat",
+            "price": "$60",
+            "productCount": 32,
             "size": [
                 "M",
                 "L"
@@ -121,10 +121,10 @@
             ]
         },
         {
-            "productID": 4,
-            "code": 1342,
+            "productID": 8,
+            "code": 442,
             "name": "Coat",
-            "price": "$345",
+            "price": "$80",
             "productCount": 56,
             "size": [
                 "S",
@@ -141,11 +141,11 @@
             ]
         },
         {
-            "productID": 1,
-            "code": 1342,
+            "productID": 9,
+            "code": 500,
             "name": "T-shirt",
-            "price": "$35",
-            "productCount": 30,
+            "price": "$56",
+            "productCount": 44,
             "size": [
                 "S",
                 "M",
@@ -158,8 +158,8 @@
             ]
         },
         {
-            "productID": 2,
-            "code": 13342,
+            "productID": 10,
+            "code": 521,
             "name": "Trouser",
             "price": "$135",
             "productCount": 40,
@@ -174,11 +174,11 @@
             ]
         },
         {
-            "productID": 3,
-            "code": 1242,
+            "productID": 11,
+            "code": 560,
             "name": "Shirt",
-            "price": "$40",
-            "productCount": 301,
+            "price": "$99",
+            "productCount": 10,
             "size": [
                 "M",
                 "L"
@@ -191,11 +191,11 @@
             ]
         },
         {
-            "productID": 4,
-            "code": 1342,
+            "productID": 12,
+            "code": 633,
             "name": "Coat",
-            "price": "$345",
-            "productCount": 56,
+            "price": "$125",
+            "productCount": 22,
             "size": [
                 "S",
                 "M",
@@ -211,8 +211,8 @@
             ]
         },
         {
-            "productID": 1,
-            "code": 1342,
+            "productID": 13,
+            "code": 1002,
             "name": "T-shirt",
             "price": "$35",
             "productCount": 30,
@@ -228,11 +228,11 @@
             ]
         },
         {
-            "productID": 2,
-            "code": 13342,
+            "productID": 14,
+            "code": 1212,
             "name": "Trouser",
-            "price": "$135",
-            "productCount": 40,
+            "price": "$35",
+            "productCount": 100,
             "size": [
                 "S",
                 "L"
@@ -244,11 +244,11 @@
             ]
         },
         {
-            "productID": 3,
+            "productID": 15,
             "code": 1242,
             "name": "Shirt",
-            "price": "$40",
-            "productCount": 301,
+            "price": "$90",
+            "productCount": 57,
             "size": [
                 "M",
                 "L"
@@ -261,7 +261,7 @@
             ]
         },
         {
-            "productID": 4,
+            "productID": 16,
             "code": 1342,
             "name": "Coat",
             "price": "$345",
@@ -277,7 +277,7 @@
                 "blue",
                 "green",
                 "black",
-                "yellow"
+                "Aero"
             ]
         }
     ]
