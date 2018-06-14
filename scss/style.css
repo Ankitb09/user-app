@@ -930,6 +930,9 @@ textarea.form-control {
     height: 12px;
     display: inline-block;
     margin-right: 3px; }
+  .table-grid span[data-column="1"] {
+    width: 30px;
+    max-width: 30px; }
 
 .resizing {
   cursor: ew-resize; }

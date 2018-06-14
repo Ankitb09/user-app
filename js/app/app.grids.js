@@ -34,22 +34,25 @@ APP.grid = (function (scope) {
         var productArr = data.products;
         productArr.map((curr, i, arr) => {
             var tableRowNode = `<div class="table-row">
-                <span class="table-col" data-column="1">${i + 1}</span>
-                <span class="table-col" data-column="2">${curr.name}</span>
-                <span class="table-col" data-column="3">#${curr.code}</span>
-                <span class="table-col" data-column="4">
+                <span class="table-col" data-column="1">
+                    <input type="checkbox" class="main-row-checkbox"/>
+                </span>
+                <span class="table-col" data-column="2">${i + 1}</span>
+                <span class="table-col" data-column="3">${curr.name}</span>
+                <span class="table-col" data-column="4">#${curr.code}</span>
+                <span class="table-col" data-column="5">
                 ${(curr.size).map((item) => {
                     return `<i>${item}</i>`
                 })}
                 </span>
-                <span class="table-col price-col" data-column="5">${curr.price}</span>
-                <span class="table-col product-color" data-column="6">
+                <span class="table-col price-col" data-column="6">${curr.price}</span>
+                <span class="table-col product-color" data-column="7">
                 ${(curr.color).map((item) => {
                     return `<i style=${`background-color:${item}`}></i>`
                 }).join('')}
                 </span>
-                <span class="table-col" data-column="7">${curr.productCount} items</span>
-                <span class="table-col remove-row" data-column="8" title="delete row">&#10008;</span>
+                <span class="table-col" data-column="8">${curr.productCount} items</span>
+                <span class="table-col remove-row" data-column="9" title="delete row">&#10008;</span>
            </div>`;
             $('#product-table .table-body').append(tableRowNode)
         })
@@ -109,6 +112,12 @@ APP.grid = (function (scope) {
         //         pressed = false;
         //     }
         // });
+    };
+
+    scope.multiRowsOperation = function () {
+        $('#master-checkbox').click(function(){
+            
+        })
     };
 
     scope.deleteRow = function () {

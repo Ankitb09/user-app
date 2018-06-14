@@ -42,7 +42,7 @@
             color: #3591CF;
             padding: 6px 6px 0 0;
         }
-        @at-root .windows .table-head{
+        @at-root .windows .table-head {
             padding: 0 17px 0 0;
         }
     }
@@ -89,6 +89,10 @@
         height: 12px;
         display: inline-block;
         margin-right: 3px;
+    }
+    span[data-column="1"] {
+        width: 30px;
+        max-width: 30px;
     }
 }
 

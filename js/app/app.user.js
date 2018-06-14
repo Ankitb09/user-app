@@ -14,7 +14,7 @@ APP.user = (function (scope) {
         });
 
         var userCredentials = APP.utilities.getStorage('user');
-        if (document.querySelector('.user-name a') != null) {
+        if (document.querySelector('.user-name a') != null && userCredentials != null) {
             document.querySelector('.user-name a').innerHTML = `Hello ${userCredentials.name}`
         }
 
